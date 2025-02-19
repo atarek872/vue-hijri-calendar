@@ -38,6 +38,7 @@
   import 'moment-hijri'
   
   export default {
+    name: "HijriCalendar",
     props: {
       type: {
         type: String,
@@ -64,7 +65,7 @@
         
         let date = start.clone()
         while (date.isBefore(end)) {
-          const hijriDate = date.clone().format('iYYYY/iM/iD')
+          // const hijriDate = date.clone().format('iYYYY/iM/iD')
           const isUmmAlQura = this.checkUmmAlQura(date)
           
           dates.push({
